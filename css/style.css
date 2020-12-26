@@ -53,6 +53,17 @@ h1 {
     overflow: hidden;
 }
 
+.block--area {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    margin-top: 10px;
+    cursor: pointer;
+}
+
 .block {
     position: absolute;
     z-index: 5;

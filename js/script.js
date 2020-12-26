@@ -28,10 +28,11 @@ function drawCircle() {
     let r1 = Math.floor(Math.random() * ((height-30) - 30 + 1)) + 30;
     let r2 = Math.floor(Math.random() * ((width-30) - 30 + 1)) + 30;
 
-    body.innerHTML = '<div class="block"></div>';
+    body.innerHTML = '<div class="block--area"><div class="block"></div></div>';
     let circleStyle = document.querySelector('.block');
-    circleStyle.style.top = r1 +'px';
-    circleStyle.style.left = r2 +'px';
+    let blockArea = document.querySelector('.block--area');
+    blockArea.style.top = r1 +'px';
+    blockArea.style.left = r2 +'px';
 
        circleStyle.addEventListener('click', function(){
         clearInterval(interval);
