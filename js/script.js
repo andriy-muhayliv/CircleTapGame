@@ -47,17 +47,17 @@ function drawCircle() {
        let time = 1000;
        if (points.innerHTML >= 10) {
         time = 900
-       } else if (points.innerHTML >= 20) {
+       } if (points.innerHTML >= 20) {
         time = 850
-       } else if (points.innerHTML >= 30) {
+       } if (points.innerHTML >= 30) {
         time = 800
-       } else if (points.innerHTML >= 40) {
+       } if (points.innerHTML >= 40) {
            time = 750;
-       } else if (points.innerHTML >= 50) {
+       } if (points.innerHTML >= 50) {
            time = 700;
-       } else if (points.innerHTML >= 60) {
+       } if (points.innerHTML >= 60) {
            time = 650;
-       } else if (points.innerHTML >= 70) {
+       } if (points.innerHTML >= 70) {
            time = 600;
        }
         let t = Math.round(time/60);
