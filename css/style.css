@@ -1,0 +1,87 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+.button {
+    position: absolute;
+    top: 40%;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      width: 200px;
+      z-index: 10;
+}
+button {
+    margin-top: 10px;
+    padding: 10px 30px;
+    background-color: rgb(223, 118, 118);
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s ease-in;
+}
+
+button:hover {
+background-color: rgb(206, 143, 50);
+}
+
+.lostAlert {
+    width: 70%;
+    height: 70%;
+    background-color: #fff;
+    border: 1px solid black;
+    position: absolute;
+    top: 50%;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%, -50%);
+      z-index: 11;
+      display: none;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20%;
+}
+
+.container {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.block {
+    position: absolute;
+    z-index: 5;
+    cursor: pointer;
+    width: 1px;
+    height: 1px;
+    background-color: black;
+    border-radius: 100px;
+    top: 50%;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%, -50%);
+}
+
+.points {
+ position: absolute;
+z-index: 5;
+}
+
+.lives {
+    display: flex;
+    position: absolute;
+    right: 10px;
+}
+
+h4:nth-child(2){
+    position: absolute;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    margin-top: 10px;
+}
