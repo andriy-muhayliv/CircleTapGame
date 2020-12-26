@@ -12,6 +12,7 @@ start.addEventListener('click', function() {
     document.querySelector('.button').style.display = 'none';
     lives.innerHTML = 3;
     points.innerHTML = 0;
+    n = 0;
     drawCircle()
 });
 
