@@ -1,5 +1,4 @@
-
-let body = document.querySelector('.container');
+let container = document.querySelector('.container');
 let points = document.querySelector('span');
 let n = 0;
 let lives = document.querySelector('p');
@@ -22,13 +21,13 @@ start.addEventListener('click', function() {
 
 function drawCircle() {
     bestResult.innerHTML = `Best result: ${localStorage.getItem('point')}`;
-    const height=document.body.clientHeight; 
-    const width=document.body.clientWidth; 
+    const height=container.clientHeight; 
+    const width=container.clientWidth; 
 
     let r1 = Math.floor(Math.random() * ((height-30) - 30 + 1)) + 30;
     let r2 = Math.floor(Math.random() * ((width-30) - 30 + 1)) + 30;
 
-    body.innerHTML = '<div class="block--area"><div class="block"></div></div>';
+    container.innerHTML = '<div class="block--area"><div class="block"></div></div>';
     let circleStyle = document.querySelector('.block');
     let blockArea = document.querySelector('.block--area');
     blockArea.style.top = r1 +'px';
@@ -46,14 +45,14 @@ function drawCircle() {
        });
 
        let time = 1000;
-       if (points.innerHTML >= 5) {
-        time = 900
-       } if (points.innerHTML >= 10) {
-        time = 800
+       if (points.innerHTML >= 10) {
+        time = 950
        } if (points.innerHTML >= 20) {
-        time = 700
-       } if (points.innerHTML >= 50) {
-           time = 600;
+        time = 900
+       } if (points.innerHTML >= 30) {
+        time = 850
+       } if (points.innerHTML >= 40) {
+           time = 800;
        }      
         let t = Math.round(time/60);
         let step = 1;
@@ -76,3 +75,4 @@ function drawCircle() {
     }, t);
        
 };
+
