@@ -46,14 +46,20 @@ function drawCircle() {
 
        let time = 1000;
        if (points.innerHTML >= 10) {
-        time = 950
-       } if (points.innerHTML >= 20) {
         time = 900
-       } if (points.innerHTML >= 30) {
+       } else if (points.innerHTML >= 20) {
         time = 850
-       } if (points.innerHTML >= 40) {
-           time = 800;
-       }      
+       } else if (points.innerHTML >= 30) {
+        time = 800
+       } else if (points.innerHTML >= 40) {
+           time = 750;
+       } else if (points.innerHTML >= 50) {
+           time = 700;
+       } else if (points.innerHTML >= 60) {
+           time = 650;
+       } else if (points.innerHTML >= 70) {
+           time = 600;
+       }
         let t = Math.round(time/60);
         let step = 1;
         let interval = setInterval(() => {
