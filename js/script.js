@@ -74,7 +74,7 @@ function drawCircle() {
              } if(lives.innerHTML <= 0) {
                 clearInterval(interval);
                 document.querySelector('.lostAlert').style.display = 'block';
-                lostAlert.innerHTML = `You will lost your result is: ${points.innerHTML}`
+                lostAlert.innerHTML = `You lose. Your result is: ${points.innerHTML}`
                 document.querySelector('.button').style.display = 'block';
                  }
              
