@@ -32,8 +32,11 @@ function drawCircle() {
     let blockArea = document.querySelector('.block--area');
     blockArea.style.top = r1 +'px';
     blockArea.style.left = r2 +'px';
+    circleStyle.addEventListener('touchstart', deleteCircle);
+    circleStyle.addEventListener('click', deleteCircle);
 
-       circleStyle.addEventListener('click', function(){
+
+       function deleteCircle(){
         clearInterval(interval);
         n++
         points.innerHTML = n;
@@ -42,7 +45,7 @@ function drawCircle() {
         if (localStorage.getItem('point') <= n ) {
         localStorage.setItem('point', n);
         }
-       });
+       };
 
        let time = 1000;
        if (points.innerHTML >= 10) {
