@@ -22,6 +22,7 @@ setInterval(() => {
                             extraLifeHolder.style.display = 'block';
                         
                             extraLifeHolder.onclick = function() {
+                                navigator.vibrate(20);
                                 plusLife.innerHTML = +plusLife.innerHTML + 1;
                                 extraLifeHolder.style.display = 'none';
                                 clearInterval(interval);
