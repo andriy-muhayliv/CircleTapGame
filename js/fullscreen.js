@@ -1,3 +1,3 @@
-window.addEventListener('click', function(){
+document.addEventListener('click', function(){
     window.requestFullscreen();    
 });
