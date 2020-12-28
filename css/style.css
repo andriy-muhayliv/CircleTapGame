@@ -3,6 +3,10 @@
     margin: 0;
 }
 
+body {
+    transition: 0.3s linear;
+}
+
 .extraLife {
     position: absolute;
     width: 60px;
