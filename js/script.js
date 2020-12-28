@@ -32,8 +32,8 @@ function drawCircle() {
     let blockArea = document.querySelector('.block--area');
     blockArea.style.top = r1 +'px';
     blockArea.style.left = r2 +'px';
-    circleStyle.addEventListener('touchstart', deleteCircle);
-    circleStyle.addEventListener('click', deleteCircle);
+    blockArea.addEventListener('touchstart', deleteCircle);
+    blockArea.addEventListener('click', deleteCircle);
 
     if(document.querySelector('body').style.backgroundColor == 'black') {
         circleStyle.style.backgroundColor = 'white';
@@ -79,10 +79,13 @@ function drawCircle() {
                 lives.innerHTML = lives.innerHTML - 1;
                 drawCircle()
              } if(lives.innerHTML <= 0) {
+                blockArea.style.display = 'none';
                 clearInterval(interval);
                 document.querySelector('.lostAlert').style.display = 'block';
                 if (document.querySelector('body').style.backgroundColor == 'black'){
                     document.querySelector('.lostAlert').style.backgroundColor = 'black';
+                } else {
+                    document.querySelector('.lostAlert').style.backgroundColor = 'white';
                 }
                 lostAlert.innerHTML = `You lose. Your result is: ${points.innerHTML}`
                 document.querySelector('.button').style.display = 'block';

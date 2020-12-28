@@ -1,3 +1,4 @@
+const extraLifeHolder = document.querySelector('.extra-life-block');
 let extraCircle = document.querySelector('.extraLife');
 let textInnerCircle = document.querySelector('.extraLife p');
 const height=document.querySelector('.container').clientHeight; 
@@ -13,16 +14,16 @@ setInterval(() => {
                         let r2 = Math.floor(Math.random() * ((width-30) - 30 + 1)) + 30;
                         
                         
-                        extraCircle.style.top = `${r1}px`;
-                        extraCircle.style.left = `${r2}px`;
+                        extraLifeHolder.style.top = `${r1}px`;
+                        extraLifeHolder.style.left = `${r2}px`;
                         
                             
                         if(possibility == 4) {
-                            extraCircle.style.display = 'block';
+                            extraLifeHolder.style.display = 'block';
                         
-                            extraCircle.onclick = function() {
+                            extraLifeHolder.onclick = function() {
                                 plusLife.innerHTML = +plusLife.innerHTML + 1;
-                                extraCircle.style.display = 'none';
+                                extraLifeHolder.style.display = 'none';
                                 clearInterval(interval);
                             }
                         
@@ -38,7 +39,7 @@ setInterval(() => {
                                     step--
                                     if (step == 1) {
                                         clearInterval(interval);
-                                        extraCircle.style.display = 'none';
+                                        extraLifeHolder.style.display = 'none';
                                     }
                                 }, t);
                             

@@ -7,20 +7,28 @@ body {
     transition: 0.3s linear;
 }
 
+.extra-life-block {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    display: none;
+    cursor: pointer;
+  
+    z-index: 20;
+}
+
 .extraLife {
     position: absolute;
     width: 60px;
     height: 60px;
     background-color: red;
     border-radius: 50px;
-    display: none;
     font-size: 16px;
     top: 50%;
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
-    z-index: 20;
-    cursor: pointer;
+   
 }
 
 .extraLife p {
@@ -45,15 +53,15 @@ body {
 button {
     margin-top: 10px;
     padding: 10px 30px;
-    background-color: rgb(223, 118, 118);
-    border-radius: 20px;
+    background-color: #FFCC33;
+    border-radius: 10px;
     border: none;
     cursor: pointer;
     transition: 0.5s ease-in;
 }
 
 button:hover {
-background-color: rgb(206, 143, 50);
+background-color:#FF6600;
 }
 
 .lostAlert {
