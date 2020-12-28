@@ -41,6 +41,7 @@ function drawCircle() {
     }
 
        function deleteCircle(){
+        navigator.vibrate(20);
         clearInterval(interval);
         n++
         points.innerHTML = n;
