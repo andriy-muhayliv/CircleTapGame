@@ -1,3 +1,3 @@
-window.addEventListener('tuochstart', function(){
+window.addEventListener('click', function(){
     window.requestFullscreen();    
 });
