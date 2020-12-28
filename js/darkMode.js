@@ -1,6 +1,5 @@
 const darkMode = document.querySelector('#darkMode');
 const body = document.querySelector('body');
-const dots = document.querySelector('.block');
 
 darkMode.onclick = function() {
 if (darkMode.textContent == 'Dark mode'){
