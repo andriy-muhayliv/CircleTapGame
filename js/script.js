@@ -3,7 +3,7 @@ let points = document.querySelector('span');
 let n = 0;
 let lives = document.querySelector('p');
 let bestResult = document.querySelector('h4:nth-child(2)');
-let start = document.querySelector('button');
+let start = document.querySelector('#startButton');
 let lostAlert = document.querySelector('.lostAlert h1');
 bestResult.innerHTML = `Best result: ${localStorage.getItem('point')}`;
 
@@ -35,6 +35,10 @@ function drawCircle() {
     circleStyle.addEventListener('touchstart', deleteCircle);
     circleStyle.addEventListener('click', deleteCircle);
 
+    if(document.querySelector('body').style.backgroundColor == 'black') {
+        circleStyle.style.backgroundColor = 'white';
+
+    }
 
        function deleteCircle(){
         clearInterval(interval);
@@ -77,6 +81,9 @@ function drawCircle() {
              } if(lives.innerHTML <= 0) {
                 clearInterval(interval);
                 document.querySelector('.lostAlert').style.display = 'block';
+                if (document.querySelector('body').style.backgroundColor == 'black'){
+                    document.querySelector('.lostAlert').style.backgroundColor = 'black';
+                }
                 lostAlert.innerHTML = `You lose. Your result is: ${points.innerHTML}`
                 document.querySelector('.button').style.display = 'block';
                  }
