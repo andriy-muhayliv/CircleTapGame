@@ -12,11 +12,13 @@ start.addEventListener('click', function() {
     lives.innerHTML = 3;
     points.innerHTML = 0;
     n = 0;
+    navigator.vibrate(20);
     drawCircle()
 });
 
     document.querySelector('.lostAlert').addEventListener('click', function() {
         this.style.display = 'none';
+        navigator.vibrate(20);
     })
 
 function drawCircle() {
