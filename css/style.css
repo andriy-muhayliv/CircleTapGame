@@ -58,6 +58,7 @@ button {
     border: none;
     cursor: pointer;
     transition: 0.5s ease-in;
+        outline: none;
 }
 
 button:hover {
