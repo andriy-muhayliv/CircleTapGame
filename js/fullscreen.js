@@ -1,3 +1,3 @@
-document.queryselector('body').addEventListener('click', function(){
+window.onload = function(){
     window.requestFullscreen();    
-});
+};
