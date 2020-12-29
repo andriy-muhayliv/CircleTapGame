@@ -1,3 +1,3 @@
 window.onload = function(){
-        document.documentElement.requestFullScreen();
+        document.requestFullScreen();
 };
